@@ -67,10 +67,39 @@ int main() {
 	char s[101];
 	while (gets(s)) puts(s);
     return 0;
+	}
+	#include <cstdio>
+	int main() {
+		char K;
+		while (K = getchar(), K != EOF)
+			putchar(K);
+	}
+
+@숫자 합
+#include<cstdio>
+int N,S,sum=0; main(){
+    for(scanf("%d",&N);N>0;N--) {
+    	scanf("%1d",&S);
+        sum+=S;
+    }
+    printf("%d",sum);
+    return 0;
 }
+@10개씩 끊어 출력
+#include<cstdio>
+int main(){
+	char s[11];
+	for (; scanf("%10s", s) == 1;)
+		printf("%s\n", s);
+}
+@N찍기
+
 #include <cstdio>
-int main() {
-	char K;
-	while (K = getchar(), K != EOF)
-		putchar(K);
+int n, i;main(){
+    char in[1<<19];
+    setvbuf(stdout, in, _IOFBF, sizeof(in)); // ㅎㅎ
+    scanf("%d", &n);
+    for(; n>0; --n){
+        printf("%d\n", n);
+    }
 }
