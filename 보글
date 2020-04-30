@@ -1,0 +1,34 @@
+#include<cstdio>
+#include<string>
+int dx[8]={-1,-1,-1,1,1,1,0,0};
+int dy[8]={-1,0,1,-1,0,1,-1,1};
+char d[5][5];
+char a[26]={0};
+bool hasword(int y,int x,int i){
+	if(x>4||y>4) return false;
+	if(a[i]==0) return true;
+	if(d[y][x]!=a[i]) return false;
+	for(int dir=0;dir<8;dir++){
+		if(hasword(y+dy[dir],x+dx[dir],i+1)) return true;
+	}
+	return false;
+}
+int main(){
+	for(int j=0;j<5;j++)
+			scanf("%s",d[j]);
+	while(1){
+		
+		bool tr=false;	
+		scanf("%s",a);
+	for(int j=0;j<5;j++){
+		if(tr) break;
+		for(int t=0;t<5;t++){
+			if(hasword(j,t,0)) {
+				tr=true; 
+				break;
+			}
+		}
+	}
+	if(tr) printf("true");
+	}
+}
