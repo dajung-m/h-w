@@ -11,7 +11,7 @@ int Friendspair(bool taken[10]){
 			taken[first]=true;
 			taken[pair]=true;
 			sum+=Friendspair(taken);
-			taken[first]=true;
+			taken[first]=false;
 			taken[pair]=false;
 		}
 	}
