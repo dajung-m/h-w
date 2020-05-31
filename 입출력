@@ -1,0 +1,126 @@
+#include<cstdio>
+
+int main(){
+    printf("Hello World!");
+}
+
+@A+B
+#include<cstdio>
+
+int A,B; main(){
+    scanf("%d%d",&A,&B);
+    printf("%d",A+B);
+    return 0;
+}
+@A+B-3
+#include<cstdio>
+int A,B,T; main(){
+    scanf("%d",&T);
+    while(T--){
+        scanf("%d%d",&A,&B),printf("%d\n",A+B);
+    }
+    return 0;
+}
+
+@A+B EOP
+#include<cstdio>
+int A,B; main(){
+    while(~scanf("%d%d",&A,&B)){
+        printf("%d\n",A+B);
+    }
+    return 0;
+}
+
+@A+B ==0
+#include<cstdio>
+int A,B; main(){
+    while(scanf("%d%d",&A,&B)){
+        if(!(A+B)) break;
+        printf("%d\n",A+B);
+    }
+    return 0;
+}
+@A+B A,B
+#include<cstdio>
+int A,B,T; main(){
+    scanf("%d",&T);
+    while(T--){
+        scanf("%d,%d",&A,&B),printf("%d\n",A+B);
+    }
+    return 0;
+}
+
+@A+B Case #%d: %d\n
+#include<cstdio>
+int A,B,T,i=0; main(){
+    scanf("%d",&T);
+    while(T--){
+        i++;
+        scanf("%d%d",&A,&B),printf("Case #%d: %d\n",i,A+B);
+    }
+    return 0;
+}
+/////////////////////////////////////////////////////////////////
+@string
+#include <cstdio>
+int main() {
+	char s[101];
+	while (gets(s)) puts(s);
+    return 0;
+	}
+	#include <cstdio>
+	int main() {
+		char K;
+		while (K = getchar(), K != EOF)
+			putchar(K);
+	}
+
+@숫자 합
+#include<cstdio>
+int N,S,sum=0; main(){
+    for(scanf("%d",&N);N>0;N--) {
+    	scanf("%1d",&S);
+        sum+=S;
+    }
+    printf("%d",sum);
+    return 0;
+}
+@10개씩 끊어 출력
+#include<cstdio>
+int main(){
+	char s[11];
+	for (; scanf("%10s", s) == 1;)
+		printf("%s\n", s);
+}
+@N찍기
+
+#include <cstdio>
+int n, i;main(){
+    char in[1<<19];
+    setvbuf(stdout, in, _IOFBF, sizeof(in)); // ㅎㅎ
+    scanf("%d", &n);
+    for(; n>0; --n){
+        printf("%d\n", n);
+    }
+}
+
+@별찍기 3
+#include<cstdio>
+int n,i;main(){
+	scanf("%d",&n);
+	for(;n>0;n--){
+		i=n;
+		while(i) printf("*"),i--;
+		if(n>1)printf("\n");
+	}
+}
+@별찍기 4
+#include<cstdio>
+int main(){
+    int n,i,j;
+    scanf("%d",&n);
+    for(i=n;i>0;printf("\n",i--))
+        for(j=0;j<n;j++)
+            printf("%c",i+j<n?' ':'*');
+    return 0;
+}

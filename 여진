@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int main(){
+	int a[5][5],cnt=0;
+	for(int i=0;i<5;i++)
+		for(int j=0;j<5;j++)
+			a[i][j]=++cnt;
+	printf("방의 이름 \n");
+	for(int i=0;i<5;i++){
+		printf(" [%d]+",i);
+		for(int j=0;j<5;j++)
+			printf(" [%d]",j);
+		printf("\n");
+		}
+	
+	printf("방의 순서 \n");
+	for(int i=0;i<5;i++){
+		for(int j=0;j<5;j++)
+			printf(" %2d",a[i][j]);
+		printf("\n");
+	}
+		return 0;
+}
